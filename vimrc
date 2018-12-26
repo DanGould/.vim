@@ -17,11 +17,18 @@ set fileformats=unix,dos
 set nocompatible
 filetype off
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/Dropbox/vim/.vim/plugged')
 
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'neoclide/vim-jsx-improve'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -63,8 +70,7 @@ set number
 set ignorecase
 set smartcase
 
-set t_Co=256
-colorscheme candycode
+"set t_Co=256
 
 "Maps write to control-s
 inoremap <C-s> <esc>:w<cr>

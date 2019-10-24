@@ -32,24 +32,8 @@ Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
-"syntax highlighting for flow
-
-"let g:javascript_plugin_flow=1
-"syntax on
-
-" syntastic --------------------------------------
-
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_javascript_checkers = ['eslint']
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
-" ---------------------------------------------
+syntax on
+colorscheme desert
 
 set wildmenu
 set showcmd
